@@ -4,7 +4,7 @@ function Button({
   children,
   onClick,
 }: {
-  children: string;
+  children: React.ReactNode;
   onClick?: () => void;
 }) {
   return (

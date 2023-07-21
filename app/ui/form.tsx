@@ -1,14 +1,14 @@
-import Button from "@/ui/button";
+import Button from "@/app/ui/button";
 import { useContext } from "react";
-import { diaLogSet } from "@/ui/dialog/dialogState";
+import { useDialogState } from "@/app/contextproviders/dialogState";
 
 export default () => {
-  const setIsOpen = useContext(diaLogSet);
+  const { setIsOpen } = useDialogState();
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        setIsOpen(true);
+        // setIsOpen(true);
       }}
       className="flex flex-col gap-4 w-full px-4 max-w-md"
     >
